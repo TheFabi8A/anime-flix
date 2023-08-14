@@ -104,8 +104,6 @@ export default function Carousel() {
     event.preventDefault();
   };
 
-  console.log(isDragging);
-
   return (
     <>
       <div
