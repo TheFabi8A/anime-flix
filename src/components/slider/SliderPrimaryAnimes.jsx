@@ -6,6 +6,7 @@ import { useFetch } from "@useFetch";
 
 export default function SliderPrimaryAnimes() {
   const { data } = useFetch("http://localhost:3000/animes");
+
   const ANIMES_SLIDER_COUNT = data?.length;
 
   const [currentSlide, setCurrentSlide] = useState(0);

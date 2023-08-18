@@ -5,8 +5,8 @@ export default function UploadAnime() {
   const { postData } = useFetch("http://localhost:3000/animes");
 
   const [sinopsisValue, setSinopsisValue] = useState("");
-  const [mobileImageFileName, setMobileImageFileName] = useState("");
-  const [desktopImageFileName, setDesktopImageFileName] = useState("");
+  const [mobileImageFileName, setMobileImageFileName] = useState(null);
+  const [desktopImageFileName, setDesktopImageFileName] = useState(null);
   const [selectedType, setSelectedType] = useState("series");
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [animeUrl, setAnimeUrl] = useState("");

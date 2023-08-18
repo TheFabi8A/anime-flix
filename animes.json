@@ -16,10 +16,7 @@
           "mobile": "/page/mobile/horimiya-the-missing-pieces.webp"
         }
       },
-      "genres": [
-        "drama",
-        "romance"
-      ],
+      "genres": ["drama", "romance"],
       "seasons": [
         {
           "number-season": 1,
@@ -138,11 +135,7 @@
           "mobile": "/page/mobile/mushoku-tensei-jobless-reincarnation.webp"
         }
       },
-      "genres": [
-        "aventura",
-        "drama",
-        "fantasía"
-      ],
+      "genres": ["aventura", "drama", "fantasía"],
       "seasons": [
         {
           "number-season": 1,
@@ -326,11 +319,7 @@
       "id": 2,
       "anime-url": "reign-of-the-seven-spellblades",
       "anime-name": "Reign of the Seven Spellblades",
-      "genres": [
-        "acción",
-        "drama",
-        "fantasía"
-      ],
+      "genres": ["acción", "drama", "fantasía"],
       "type": "series",
       "sinopsis": "Oliver llega a la Academia de Magia Kimberly dispuesto a comenzar sus estudios. La academia tiene fama por su dureza, donde un 20% de sus alumnos son \"consumidos por el conjuro\" antes de graduarse. El precio de aprender a usar la magia es alto, pero en su primer día, Oliver entabla amistad casual con otros alumnos que no tardan en formar un pequeño grupo para enfrentarse a esta nueva etapa de sus vidas.",
       "images": {
@@ -348,11 +337,7 @@
       "id": 3,
       "anime-url": "rent-a-girlfriend",
       "anime-name": "Rent a Girlfriend",
-      "genres": [
-        "comedia",
-        "romance",
-        "shounen"
-      ],
+      "genres": ["comedia", "romance", "shounen"],
       "type": "series",
       "sinopsis": "Kazuya Kinoshita es un joven universitario de 20 años que tras conseguir novia, pudo besarla, ¡pero lo dejó tras solo un mes!. \"Maldita sea, no quiero tener que volver a pasar por eso\".\n\nDesesperado, recurre a un método muy particular para tener por fin una cita: solicitar una novia de alquiler. Cuando llega al punto de encuentro le espera una chica: \"Eres Kazuya, ¿verdad?\". Es una chica preciosa de pelo negro y largo que le sonríe con ternura. La chica es Chizuru Mizuhara. ¡Y de esa cita de alquiler nace algo real! Una comedia romántica repleta de amor y emoción da comienzo.",
       "images": {
@@ -370,10 +355,7 @@
       "id": 4,
       "anime-url": "sugar-apple-fairy-tale",
       "anime-name": "Sugar Apple Fairy Tale",
-      "genres": [
-        "drama",
-        "fantasía"
-      ],
+      "genres": ["drama", "fantasía"],
       "type": "series",
       "sinopsis": "En un mundo en el que las hadas se compran y venden al mejor postor, los humanos no tienen precisamente una relación de amistad con su pueblo. Pero es precisamente la amistad lo que a Anne Halford le interesa obtener de su nuevo guardaespaldas hada, Challe, aunque a él no le hace especial ilusión la idea. Como su nueva ama, Anne le encarga escoltarla en una zona especialmente peligrosa, pero teniendo en cuenta que su guardaespaldas anhela escapar de una vida de servidumbre, la joven tendrá que lidiar con mucho más de lo que esperaba…",
       "images": {
@@ -391,12 +373,7 @@
       "id": 5,
       "anime-url": "the-devil-is-a-part-timer",
       "anime-name": "The Devil is a Part Timer",
-      "genres": [
-        "comedia",
-        "fantasía",
-        "romance",
-        "sobrenatural"
-      ],
+      "genres": ["comedia", "fantasía", "romance", "sobrenatural"],
       "type": "series",
       "sinopsis": "Frustrado por la heroína justo cuando está a un paso de conquistar el mundo, el Rey Demonio se encuentra en el Tokio moderno. Sin habilidades que valga la pena mencionar para enfrentar el mundo real, el Rey Demonio se ve obligado a llegar a fin de mes haciendo hamburguesas en un restaurante de comida rápida. Para detener cualquier plan futuro de dominación mundial, la heroína persigue el rastro del demonio y termina trabajando como una humilde vendedora por teléfono.",
       "images": {
@@ -414,10 +391,7 @@
       "id": 6,
       "anime-url": "the-quintessential-quintuplets-movie",
       "anime-name": "The Quintessential Quintuplets Movie",
-      "genres": [
-        "comedia",
-        "romance"
-      ],
+      "genres": ["comedia", "romance"],
       "type": "movie",
       "sinopsis": "Fuutarou Uesugi es un estudiante de segundo año de preparatoria/instituto cuya familia siempre ha sido muy pobre. Un día recibe una suculenta oferta de trabajo como tutor a medio tiempo... ¡pero sus estudiantes resultan ser unas chicas de su propia clase! Para complicar más las cosas, son quintillizas... Las cinco hermanas son todas muy atractivas, pero no es lo único que tienen en común: todas odian estudiar y sus calificaciones siempre están al límite de la catástrofe. Tendrá que conseguir que las cinco estudien, pero primero tendrá que estudiar él cómo ganarse su confianza.",
       "images": {
@@ -430,30 +404,6 @@
           "mobile": "/page/mobile/the-quintessential-quintuplets.webp"
         }
       }
-    },
-    {
-      "anime-url": "adssdaasdads",
-      "anime-name": "sdaasdad",
-      "sinopsis": "sadsdassda",
-      "type": "movie",
-      "genres": [
-        "Action",
-        "Music",
-        "Romance",
-        "Drama",
-        "Slice of life"
-      ],
-      "images": {
-        "home": {
-          "desktop": "/slider/desktop/gigachad.jpg",
-          "mobile": "/slider/mobile/gigachad.jpg"
-        },
-        "page": {
-          "desktop": "/page/desktop/gigachad.jpg",
-          "mobile": "/page/mobile/gigachad.jpg"
-        }
-      },
-      "id": 7
     }
   ]
 }
