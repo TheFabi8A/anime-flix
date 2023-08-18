@@ -22,8 +22,8 @@ export default function App() {
               element={
                 <AnimePage
                   animeName={anime?.["anime-name"]}
-                  animeImageDesktop={anime?.images?.page?.desktop}
-                  animeImageMobile={anime?.images?.page?.mobile}
+                  animeImageDesktop={anime?.["image-desktop"]}
+                  animeImageMobile={anime?.["image-mobile"]}
                   animeSinopsis={anime?.sinopsis}
                   genres={anime?.genres}
                 />

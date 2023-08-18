@@ -166,13 +166,13 @@ export default function SliderPrimaryAnimes() {
                   />
                   <picture className="w-full shrink-0">
                     <source
-                      srcSet={anime?.images?.home?.mobile}
+                      srcSet={anime?.["image-mobile"]}
                       media="(max-width: 767px)"
                     />
                     <img
                       onDragStart={handleDragStart}
                       className="w-full"
-                      src={anime?.images?.home?.desktop}
+                      src={anime?.["image-desktop"]}
                       alt={`${anime["anime-url"]} portada`}
                     />
                   </picture>

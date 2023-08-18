@@ -5,12 +5,13 @@ export default function UploadAnime() {
   const { postData } = useFetch("http://localhost:3000/animes");
 
   const [sinopsisValue, setSinopsisValue] = useState("");
-  const [mobileImageFileName, setMobileImageFileName] = useState(null);
-  const [desktopImageFileName, setDesktopImageFileName] = useState(null);
   const [selectedType, setSelectedType] = useState("series");
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [animeUrl, setAnimeUrl] = useState("");
   const [animeName, setAnimeName] = useState("");
+  const [mobileImageFile, setMobileImageFile] = useState(null);
+  const [desktopImageFile, setDesktopImageFile] = useState(null);
+
   const availableGenres = [
     "Action",
     "Music",
@@ -28,27 +29,6 @@ export default function UploadAnime() {
     "Shojo",
     "Thriller",
   ];
-
-  const imagesData = {
-    home: {
-      desktop: `/slider/desktop/${desktopImageFileName}`,
-      mobile: `/slider/mobile/${mobileImageFileName}`,
-    },
-    page: {
-      desktop: `/page/desktop/${desktopImageFileName}`,
-      mobile: `/page/mobile/${mobileImageFileName}`,
-    },
-  };
-
-  const handleMobileImageChange = (event) => {
-    const fileName = event.target.files[0]?.name || "";
-    setMobileImageFileName(fileName);
-  };
-
-  const handleDesktopImageChange = (event) => {
-    const fileName = event.target.files[0]?.name || "";
-    setDesktopImageFileName(fileName);
-  };
 
   const handleTypeChange = (event) => {
     setSelectedType(event.target.value);
@@ -88,20 +68,72 @@ export default function UploadAnime() {
     setAnimeName(cleanedText);
   };
 
-  const handleSubmit = (event) => {
+  const handleMobileImageChange = (event) => {
+    setMobileImageFile(event.target.files[0]);
+  };
+
+  const handleDesktopImageChange = (event) => {
+    setDesktopImageFile(event.target.files[0]);
+  };
+
+  const submitImagesToCloudinary = async () => {
+    const formData = new FormData();
+    formData.append("file", mobileImageFile);
+    formData.append("file", desktopImageFile);
+    formData.append(
+      "upload_preset",
+      import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET
+    );
+    formData.append("cloud_name", import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
+
+    try {
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${
+          import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+        }/image/upload`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Error uploading images to Cloudinary");
+      }
+
+      const imagesData = await response.json();
+      return imagesData;
+    } catch (error) {
+      console.error("Error uploading images:", error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const cleanedAnimeName = cleanText(animeName);
+    try {
+      let imagesData = null;
+      if (mobileImageFile && desktopImageFile) {
+        imagesData = await submitImagesToCloudinary();
+      }
 
-    const animeData = {
-      "anime-url": animeUrl,
-      "anime-name": cleanedAnimeName,
-      sinopsis: sinopsisValue,
-      type: selectedType,
-      genres: selectedGenres,
-      images: imagesData,
-    };
-    postData(animeData);
+      const animeData = {
+        "anime-url": animeUrl,
+        "anime-name": animeName,
+        sinopsis: sinopsisValue,
+        type: selectedType,
+        genres: selectedGenres,
+      };
+
+      if (imagesData) {
+        animeData.images = imagesData;
+      }
+
+      await postData(animeData, false);
+    } catch (error) {
+      console.error("Error adding new anime:", error);
+    }
   };
 
   return (
@@ -186,6 +218,7 @@ export default function UploadAnime() {
         onChange={handleDesktopImageChange}
         required
       />
+
       <div className="mt-4 mb-2 font-semibold">Genres:</div>
       <div className="flex flex-wrap gap-2">
         {availableGenres.map((genre) => (

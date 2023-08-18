@@ -13,11 +13,33 @@ export function useFetch(url) {
       .finally(() => setLoading(false));
   }, [url]);
 
-  const postData = async (formData) => {
+  const postData = async (formData, uploadImages = false) => {
     try {
+      if (uploadImages > 0) {
+        const imagesResponse = await fetch(
+          `https://api.cloudinary.com/v1_1/${
+            import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+          }/image/upload`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+
+        if (!imagesResponse.ok) {
+          throw new Error("Error uploading images");
+        }
+
+        const imagesData = await imagesResponse.json();
+        formData.images = imagesData;
+      }
+
       const response = await fetch(url, {
         method: "POST",
-        body: formData,
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
       if (!response.ok) {
@@ -30,6 +52,7 @@ export function useFetch(url) {
       return responseData;
     } catch (error) {
       console.error("Error adding new data:", error);
+      console.log("Error Response:", await error.response.json()); // Muestra el cuerpo de la respuesta en caso de error
       throw error;
     }
   };
