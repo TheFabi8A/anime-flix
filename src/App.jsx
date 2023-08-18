@@ -3,7 +3,7 @@ import { AnimePage, HomePage, UploadAnimePage } from "./components";
 import { useFetch } from "@useFetch";
 
 export default function App() {
-  const { data } = useFetch("http://localhost:3000/animes");
+  const { data } = useFetch("https://api-anime-flix.vercel.app/animes");
 
   return (
     <BrowserRouter>
