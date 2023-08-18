@@ -8,10 +8,7 @@
       "type": "series",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/horimiya-the-missing-pieces_jnflnr.webp",
       "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/horimiya-the-missing-pieces_vs9vov.webp",
-      "genres": [
-        "drama",
-        "romance"
-      ],
+      "genres": ["drama", "romance"],
       "seasons": [
         {
           "number-season": 1,
@@ -122,11 +119,7 @@
       "type": "series",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/mushoku-tensei-jobless-reincarnation_pzyfiy.webp",
       "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378550/mushoku-tensei-jobless-reincarnation_ne08zw.webp",
-      "genres": [
-        "aventura",
-        "drama",
-        "fantasía"
-      ],
+      "genres": ["aventura", "drama", "fantasía"],
       "seasons": [
         {
           "number-season": 1,
@@ -310,11 +303,7 @@
       "id": 2,
       "anime-url": "reign-of-the-seven-spellblades",
       "anime-name": "Reign of the Seven Spellblades",
-      "genres": [
-        "acción",
-        "drama",
-        "fantasía"
-      ],
+      "genres": ["acción", "drama", "fantasía"],
       "type": "series",
       "sinopsis": "Oliver llega a la Academia de Magia Kimberly dispuesto a comenzar sus estudios. La academia tiene fama por su dureza, donde un 20% de sus alumnos son \"consumidos por el conjuro\" antes de graduarse. El precio de aprender a usar la magia es alto, pero en su primer día, Oliver entabla amistad casual con otros alumnos que no tardan en formar un pequeño grupo para enfrentarse a esta nueva etapa de sus vidas.",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378454/reign-of-the-seven-spellblades_krbwjl.webp",
@@ -324,11 +313,7 @@
       "id": 3,
       "anime-url": "rent-a-girlfriend",
       "anime-name": "Rent a Girlfriend",
-      "genres": [
-        "comedia",
-        "romance",
-        "shounen"
-      ],
+      "genres": ["comedia", "romance", "shounen"],
       "type": "series",
       "sinopsis": "Kazuya Kinoshita es un joven universitario de 20 años que tras conseguir novia, pudo besarla, ¡pero lo dejó tras solo un mes!. \"Maldita sea, no quiero tener que volver a pasar por eso\".\n\nDesesperado, recurre a un método muy particular para tener por fin una cita: solicitar una novia de alquiler. Cuando llega al punto de encuentro le espera una chica: \"Eres Kazuya, ¿verdad?\". Es una chica preciosa de pelo negro y largo que le sonríe con ternura. La chica es Chizuru Mizuhara. ¡Y de esa cita de alquiler nace algo real! Una comedia romántica repleta de amor y emoción da comienzo.",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/rent-a-girlfriend_cpwkvs.webp",
@@ -338,10 +323,7 @@
       "id": 4,
       "anime-url": "sugar-apple-fairy-tale",
       "anime-name": "Sugar Apple Fairy Tale",
-      "genres": [
-        "drama",
-        "fantasía"
-      ],
+      "genres": ["drama", "fantasía"],
       "type": "series",
       "sinopsis": "En un mundo en el que las hadas se compran y venden al mejor postor, los humanos no tienen precisamente una relación de amistad con su pueblo. Pero es precisamente la amistad lo que a Anne Halford le interesa obtener de su nuevo guardaespaldas hada, Challe, aunque a él no le hace especial ilusión la idea. Como su nueva ama, Anne le encarga escoltarla en una zona especialmente peligrosa, pero teniendo en cuenta que su guardaespaldas anhela escapar de una vida de servidumbre, la joven tendrá que lidiar con mucho más de lo que esperaba…",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378453/sugar-apple-fairy-tale_zanpjm.webp",
@@ -351,12 +333,7 @@
       "id": 5,
       "anime-url": "the-devil-is-a-part-timer",
       "anime-name": "The Devil is a Part Timer",
-      "genres": [
-        "comedia",
-        "fantasía",
-        "romance",
-        "sobrenatural"
-      ],
+      "genres": ["comedia", "fantasía", "romance", "sobrenatural"],
       "type": "series",
       "sinopsis": "Frustrado por la heroína justo cuando está a un paso de conquistar el mundo, el Rey Demonio se encuentra en el Tokio moderno. Sin habilidades que valga la pena mencionar para enfrentar el mundo real, el Rey Demonio se ve obligado a llegar a fin de mes haciendo hamburguesas en un restaurante de comida rápida. Para detener cualquier plan futuro de dominación mundial, la heroína persigue el rastro del demonio y termina trabajando como una humilde vendedora por teléfono.",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/the-devil-is-a-part-timer_f2glxg.webp",
@@ -366,230 +343,11 @@
       "id": 6,
       "anime-url": "the-quintessential-quintuplets-movie",
       "anime-name": "The Quintessential Quintuplets Movie",
-      "genres": [
-        "comedia",
-        "romance"
-      ],
+      "genres": ["comedia", "romance"],
       "type": "movie",
       "sinopsis": "Fuutarou Uesugi es un estudiante de segundo año de preparatoria/instituto cuya familia siempre ha sido muy pobre. Un día recibe una suculenta oferta de trabajo como tutor a medio tiempo... ¡pero sus estudiantes resultan ser unas chicas de su propia clase! Para complicar más las cosas, son quintillizas... Las cinco hermanas son todas muy atractivas, pero no es lo único que tienen en común: todas odian estudiar y sus calificaciones siempre están al límite de la catástrofe. Tendrá que conseguir que las cinco estudien, pero primero tendrá que estudiar él cómo ganarse su confianza.",
       "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378454/the-quintessential-quintuplets_plavkl.webp",
       "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/the-quintessential-quintuplets_faibj4.webp"
-    },
-    {
-      "anime-url": "ihasdhioadshiohia",
-      "anime-name": "afmojpfhipahipafhipaf",
-      "sinopsis": "panidhnipfaiphnafnipfai",
-      "type": "series",
-      "genres": [
-        "Action",
-        "Music",
-        "Shonen"
-      ],
-      "images": {
-        "asset_id": "c748218c364e9815d2aa1c9ed38106c4",
-        "public_id": "a8c3ttqlkqqj5o8mynof",
-        "version": 1692385605,
-        "version_id": "b8836fcaa3af291837287bdc9d9f8f46",
-        "signature": "50e08125eb25ea34dfb084a1fd14ee8c1c9b04a1",
-        "width": 859,
-        "height": 960,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2023-08-18T19:06:45Z",
-        "tags": [],
-        "bytes": 52070,
-        "type": "upload",
-        "etag": "85f6c930e133aca07d160ad07c57949c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dbigyi12j/image/upload/v1692385605/a8c3ttqlkqqj5o8mynof.jpg",
-        "secure_url": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692385605/a8c3ttqlkqqj5o8mynof.jpg",
-        "folder": "",
-        "access_mode": "public",
-        "original_filename": "gigachad"
-      },
-      "id": 7
-    },
-    {
-      "anime-url": "asdasd",
-      "anime-name": "asdadsasdasd",
-      "sinopsis": "asdasd",
-      "type": "series",
-      "genres": [
-        "Shonen",
-        "Music",
-        "Action",
-        "Romance",
-        "Slice of life"
-      ],
-      "images": {
-        "asset_id": "382ce980ba64b659dfb387a79f7527c4",
-        "public_id": "uikifshckw2cvwucat8f",
-        "version": 1692385959,
-        "version_id": "b4f07e0385131442ab1b48ec00409052",
-        "signature": "bfc81cfb815f0d3bf95e4944fb02c78ac9146fce",
-        "width": 859,
-        "height": 960,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2023-08-18T19:12:39Z",
-        "tags": [],
-        "bytes": 52070,
-        "type": "upload",
-        "etag": "85f6c930e133aca07d160ad07c57949c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dbigyi12j/image/upload/v1692385959/uikifshckw2cvwucat8f.jpg",
-        "secure_url": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692385959/uikifshckw2cvwucat8f.jpg",
-        "folder": "",
-        "access_mode": "public",
-        "original_filename": "gigachad"
-      },
-      "id": 8
-    },
-    {
-      "anime-url": "asdasd",
-      "anime-name": "asdadsasdasd",
-      "sinopsis": "asdasd",
-      "type": "series",
-      "genres": [
-        "Shonen",
-        "Music",
-        "Action",
-        "Romance",
-        "Slice of life"
-      ],
-      "images": {
-        "asset_id": "1a881eb944de678a7b74ffaffac853f2",
-        "public_id": "ibsunqvesztpmkxnccme",
-        "version": 1692386062,
-        "version_id": "73980fa96d637d8458ed8624cd60e2a6",
-        "signature": "cb95b3231867d3a7d414fb0e821c826580d2018f",
-        "width": 859,
-        "height": 960,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2023-08-18T19:14:22Z",
-        "tags": [],
-        "bytes": 52070,
-        "type": "upload",
-        "etag": "85f6c930e133aca07d160ad07c57949c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dbigyi12j/image/upload/v1692386062/ibsunqvesztpmkxnccme.jpg",
-        "secure_url": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692386062/ibsunqvesztpmkxnccme.jpg",
-        "folder": "",
-        "access_mode": "public",
-        "original_filename": "gigachad"
-      },
-      "id": 9
-    },
-    {
-      "anime-url": "asdasd",
-      "anime-name": "asdadsasdasd",
-      "sinopsis": "asdasd",
-      "type": "series",
-      "genres": [
-        "Shonen",
-        "Music",
-        "Action",
-        "Romance",
-        "Slice of life"
-      ],
-      "images": {
-        "asset_id": "4178260f24bd27507bd9aa7aa4824087",
-        "public_id": "tosggsnzpjtvay9xdieg",
-        "version": 1692386083,
-        "version_id": "fa263c2dc7246d5cfc613e8cdd09df89",
-        "signature": "d8b2c8a338da249152bec368cfacb04d832e53e1",
-        "width": 859,
-        "height": 960,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2023-08-18T19:14:43Z",
-        "tags": [],
-        "bytes": 52070,
-        "type": "upload",
-        "etag": "85f6c930e133aca07d160ad07c57949c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dbigyi12j/image/upload/v1692386083/tosggsnzpjtvay9xdieg.jpg",
-        "secure_url": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692386083/tosggsnzpjtvay9xdieg.jpg",
-        "folder": "",
-        "access_mode": "public",
-        "original_filename": "gigachad"
-      },
-      "id": 10
-    },
-    {
-      "anime-url": "adsads",
-      "anime-name": "asdasdasd",
-      "sinopsis": "adsasdasd",
-      "type": "series",
-      "genres": [
-        "Shonen",
-        "Music",
-        "Action",
-        "Romance",
-        "Slice of life"
-      ],
-      "images": {
-        "asset_id": "28018b0590a264553ac6dae58bd14fe8",
-        "public_id": "lifjy1gjkhvbnnyjfuaa",
-        "version": 1692386096,
-        "version_id": "1d0eca7b4e6f40e1266f00066bb2b83e",
-        "signature": "697b4fc4ccf09f3c01150139cbb2d36c7e8ba1f8",
-        "width": 859,
-        "height": 960,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2023-08-18T19:14:56Z",
-        "tags": [],
-        "bytes": 52070,
-        "type": "upload",
-        "etag": "85f6c930e133aca07d160ad07c57949c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dbigyi12j/image/upload/v1692386096/lifjy1gjkhvbnnyjfuaa.jpg",
-        "secure_url": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692386096/lifjy1gjkhvbnnyjfuaa.jpg",
-        "folder": "",
-        "access_mode": "public",
-        "original_filename": "gigachad"
-      },
-      "id": 11
-    },
-    {
-      "anime-url": "asdasd",
-      "anime-name": "asdasdasd",
-      "sinopsis": "asdasd",
-      "type": "series",
-      "genres": [
-        "Action",
-        "Music",
-        "Shonen",
-        "Slice of life",
-        "Romance",
-        "Sports",
-        "Drama"
-      ],
-      "images": {
-        "asset_id": "a4b50f30b198da5059430e4d1f3b7b39",
-        "public_id": "umods893ovwi6cbdfkpj",
-        "version": 1692386116,
-        "version_id": "4f41f5cce22708cadaf77ad7ebf21fca",
-        "signature": "6379c6c1736171ed63a9d0ab46cbc05ab7087859",
-        "width": 859,
-        "height": 960,
-        "format": "jpg",
-        "resource_type": "image",
-        "created_at": "2023-08-18T19:15:16Z",
-        "tags": [],
-        "bytes": 52070,
-        "type": "upload",
-        "etag": "85f6c930e133aca07d160ad07c57949c",
-        "placeholder": false,
-        "url": "http://res.cloudinary.com/dbigyi12j/image/upload/v1692386116/umods893ovwi6cbdfkpj.jpg",
-        "secure_url": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692386116/umods893ovwi6cbdfkpj.jpg",
-        "folder": "",
-        "access_mode": "public",
-        "original_filename": "gigachad"
-      },
-      "id": 12
     }
   ]
 }

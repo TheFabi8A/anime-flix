@@ -76,10 +76,9 @@ export default function UploadAnime() {
     setDesktopImageFile(event.target.files[0]);
   };
 
-  const submitImagesToCloudinary = async () => {
+  const uploadImageToCloudinary = async (imageFile) => {
     const formData = new FormData();
-    formData.append("file", mobileImageFile);
-    formData.append("file", desktopImageFile);
+    formData.append("file", imageFile);
     formData.append(
       "upload_preset",
       import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET
@@ -98,13 +97,13 @@ export default function UploadAnime() {
       );
 
       if (!response.ok) {
-        throw new Error("Error uploading images to Cloudinary");
+        throw new Error("Error uploading image to Cloudinary");
       }
 
-      const imagesData = await response.json();
-      return imagesData;
+      const imageData = await response.json();
+      return imageData.secure_url;
     } catch (error) {
-      console.error("Error uploading images:", error);
+      console.error("Error uploading image:", error);
       throw error;
     }
   };
@@ -113,9 +112,12 @@ export default function UploadAnime() {
     event.preventDefault();
 
     try {
-      let imagesData = null;
+      let imageDesktopUrl = "";
+      let imageMobileUrl = "";
+
       if (mobileImageFile && desktopImageFile) {
-        imagesData = await submitImagesToCloudinary();
+        imageMobileUrl = await uploadImageToCloudinary(mobileImageFile);
+        imageDesktopUrl = await uploadImageToCloudinary(desktopImageFile);
       }
 
       const animeData = {
@@ -124,13 +126,12 @@ export default function UploadAnime() {
         sinopsis: sinopsisValue,
         type: selectedType,
         genres: selectedGenres,
+        "image-mobile": imageMobileUrl,
+        "image-desktop": imageDesktopUrl,
       };
 
-      if (imagesData) {
-        animeData.images = imagesData;
-      }
-
       await postData(animeData, false);
+      window.location.reload(true);
     } catch (error) {
       console.error("Error adding new anime:", error);
     }
