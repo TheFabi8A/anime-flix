@@ -131,7 +131,7 @@ export default function UploadAnime() {
       };
 
       await postData(animeData, false);
-      window.location.reload(true);
+      window.location.reload();
     } catch (error) {
       console.error("Error adding new anime:", error);
     }
