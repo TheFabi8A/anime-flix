@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useFetch } from "@useFetch";
 
 export default function UploadAnime() {
-  const { postData } = useFetch("http://localhost:3000/animes");
+  const { postData } = useFetch("https://api-anime-flix.vercel.app/animes");
 
   const [sinopsisValue, setSinopsisValue] = useState("");
   const [selectedType, setSelectedType] = useState("series");
@@ -140,7 +140,7 @@ export default function UploadAnime() {
   return (
     <form
       onSubmit={handleSubmit}
-      action="http://localhost:3000/animes"
+      action="https://api-anime-flix.vercel.app/animes"
       method="POST"
       className="max-w-md mx-auto p-6 rounded-lg shadow border border-red-500">
       <label htmlFor="anime-url" className="block mb-2 font-semibold">
