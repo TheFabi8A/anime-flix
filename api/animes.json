@@ -1,0 +1,353 @@
+{
+  "animes": [
+    {
+      "id": 0,
+      "anime-url": "horimiya",
+      "anime-name": "Horimiya",
+      "sinopsis": "Cuando la popular Hori y el sombrío Miyamura se conocen, revelan el lado oculto de sí mismos.\n¿Podría ser esto el comienzo de algo nuevo?",
+      "type": "series",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/horimiya-the-missing-pieces_jnflnr.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/horimiya-the-missing-pieces_vs9vov.webp",
+      "genres": ["drama", "romance"],
+      "seasons": [
+        {
+          "number-season": 1,
+          "name-season": "Horimiya",
+          "episodes": [
+            {
+              "number-episode": 1,
+              "name": "Una pequeña casualidad",
+              "nameURL": "a-tiny-happenstance",
+              "watchId": "l0Xtt9WpHVY",
+              "sinopsis": "Hori vive una doble vida: es una chica popular y moderna en la escuela, y una cuidadora sencilla y decidida en casa. Después de un encuentro casual con su compañero de clase Miyamura, descubre que no es la única que esconde su verdadero yo."
+            },
+            {
+              "number-episode": 2,
+              "name": "Tienes más de una cara",
+              "nameURL": "you-wear-more-than-one-face",
+              "watchId": "vIz-e45XBxU",
+              "sinopsis": "Cuando su madre pregunta por Miyamura, Hori se da cuenta de algo aterrador. Más tarde, el Consejo Estudiantil obliga a Hori a realizar trabajo extra, pero cuando surge un conflicto, es Miyamura quien va a suavizar las cosas."
+            },
+            {
+              "number-episode": 3,
+              "name": "Por eso está bien",
+              "nameURL": "thats-why-its-okay",
+              "watchId": "Ndws8Hdm_qY",
+              "sinopsis": "Miyamura reflexiona sobre su pasado y su presente. Hori responde a la demanda egoísta de Remi. Una acalorada conversación entre Ishikawa y Miyamura termina con una pelea a puñetazos."
+            },
+            {
+              "number-episode": 4,
+              "name": "Todos aman a alguien",
+              "nameURL": "everybody-loves-somebody",
+              "watchId": "9Bb_bWCjaFk",
+              "sinopsis": "La sala del consejo estudiantil se convierte en un lugar de reunión genial. Hori intenta poner nervioso a Miyamura. Un viejo amigo saca a relucir una nueva faceta de Miyamura. Más tarde, cuando Hori se enferma, Miyamura acude a su rescate."
+            },
+            {
+              "number-episode": 5,
+              "name": "No puedo decirlo en voz alta",
+              "nameURL": "i-cant-say-it-out-loud",
+              "watchId": "jKdNSAtuRdc",
+              "sinopsis": "Un rumor complica la incipiente relación entre Hori y Miyamura. Kyosuke se da cuenta que sus acciones del pasado tienen consecuencias en el presente. Conoce a Miyamura y le cae bien de inmediato. Sakura evalúa su amistad con Remi."
+            },
+            {
+              "number-episode": 6,
+              "name": "Este verano será muy caliente",
+              "nameURL": "this-summers-going-to-be-a-hot-one",
+              "watchId": "uWY0eRQZhso",
+              "sinopsis": "Miyamura se queda a dormir en la casa de Hori y los rumores se esparcen como pólvora en la escuela. Shindo llama a la pareja para compartir una bolsa de dulces. Una chica de segundo año comienza a acechar a Miyamura."
+            },
+            {
+              "number-episode": 7,
+              "name": "Tú estas aquí, Yo estoy aquí",
+              "nameURL": "youre-here-im-here",
+              "watchId": "mDa3OQLtNQo",
+              "sinopsis": "Sakura finalmente tiene el coraje para acercarse a Toru. Yoshikawa lucha por expresar lo que realmente quiere. Miyamura se va de viaje por una semana. A Hori le preocupa su obsesión por las películas de terror."
+            },
+            {
+              "number-episode": 8,
+              "name": "La verdad revela el engaño",
+              "nameURL": "the-truth-deception-reveals",
+              "watchId": "_qxdcxhhVjM",
+              "sinopsis": "Remi recuerda la época en que comenzó a salir con Sengoku. Miyamura descubre un lado oculto de Hori. Un chico invita a salir a Yoshikawa y el grupo le pide ayuda a Ishikawa."
+            },
+            {
+              "number-episode": 9,
+              "name": "Es difícil pero no imposible",
+              "nameURL": "its-hard-but-not-impossible",
+              "watchId": "3UUr-yiY9Xk",
+              "sinopsis": "Miyamura se encuentra con algunos rostros poco amigables. Hori intenta que Miyamura cumpla sus deseos más oscuros. El amor de Mizouchi no es correspondido. Tanihara confronta su pasado con Miyamura."
+            },
+            {
+              "number-episode": 10,
+              "name": "Hasta que se derrita la nieve",
+              "nameURL": "until-the-snow-melts",
+              "watchId": "eaTdPxSpksU",
+              "sinopsis": "Hori le hace un pedido inesperado a Miyamura. Cuando Yoshikawa se entera de que su relación falsa con Ishikawa podría estar llegando a su fin, se ve obligada a reflexionar sobre sus propios sentimientos."
+            },
+            {
+              "number-episode": 11,
+              "name": "Puede parecer odio",
+              "nameURL": "it-may-seem-like-hate",
+              "watchId": "CnZgJNzpAz8",
+              "sinopsis": "La pandilla intenta que Yanagi se relaje. Iura no tiene idea de cuánto aterroriza a Sawada. Cuando la hermana de Iura, Motoko, tiene problemas con los exámenes de ingreso, Iura le pide ayuda a Hori"
+            },
+            {
+              "number-episode": 12,
+              "name": "Hasta ahora y para siempre",
+              "nameURL": "hitherto-and-forevermore",
+              "watchId": "3FTe_qW9pEQ",
+              "sinopsis": "Yoshikawa visita la casa de Ishikawa. La Navidad trae una alegría romántica para todos. Hori y Miyamura hablan sobre su futuro."
+            },
+            {
+              "number-episode": 13,
+              "name": "Te regalaría el cielo",
+              "nameURL": "i-would-gift-you-the-sky",
+              "watchId": "",
+              "sinopsis": ""
+            }
+          ]
+        }
+      ],
+      "sequels": [],
+      "prequels": []
+    },
+    {
+      "id": 1,
+      "anime-url": "mushoku-tensei-jobless-reincarnation",
+      "anime-name": "Mushoku Tensei Jobless Reincarnation",
+      "sinopsis": "Cuando un autobús atropella a un joven de 34 años que no ha logrado mucho en su vida, su historia no termina ahí. Habiendo reencarnado en un niño, Rudy aprovechará cada oportunidad para vivir la vida que siempre quiso. ¡Con la ayuda de sus amigos, unas habilidades mágicas recién adquiridas, y el coraje para hacer las cosas que siempre ha soñado, se embarca en una aventura épica, con su experiencia pasada intacta!",
+      "type": "series",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/mushoku-tensei-jobless-reincarnation_pzyfiy.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378550/mushoku-tensei-jobless-reincarnation_ne08zw.webp",
+      "genres": ["aventura", "drama", "fantasía"],
+      "seasons": [
+        {
+          "number-season": 1,
+          "name-season": "Mushoku Tensei Jobless Reincarnation",
+          "episodes": [
+            {
+              "number-episode": 1,
+              "name": "Reencarnación sin empleo",
+              "nameURL": "jobless-reincarnation",
+              "watchId": "l0Xtt9WpHVY",
+              "sinopsis": "Un joven solitario y desempleado de 34 años es atropellado por un camión... ¡y se despierta como un bebé recién nacido en un mundo de fantasía! Con padres amorosos, toda una vida de arrepentimientos y un libro de magia para principiantes, se propone aprovechar al máximo su segunda oportunidad en la vida."
+            },
+            {
+              "number-episode": 2,
+              "name": "Maestra",
+              "nameURL": "master",
+              "watchId": "vIz-e45XBxU",
+              "sinopsis": "Rudy comienza a entrenar con su nueva maestra de magia y aprende a usar la espada con su padre. Progresa rápidamente, pero los recuerdos traumáticos de su vida pasada hacen que tenga miedo de salir. ¿Será que su segunda oportunidad ya está condenada al fracaso?"
+            },
+            {
+              "number-episode": 3,
+              "name": "Un amigo",
+              "nameURL": "a-friend",
+              "watchId": "Ndws8Hdm_qY",
+              "sinopsis": "Rudy comienza a explorar la aldea y rescata a un niño de cabello verde de un grupo de matones. Ambos comienzan a verse seguido y a practicar magia juntos. Sin embargo, parece que el nuevo amigo de Rudy esconde algo más."
+            },
+            {
+              "number-episode": 4,
+              "name": "Reunión faimiliar de emergencia",
+              "nameURL": "emergency-family-meeting",
+              "watchId": "9Bb_bWCjaFk",
+              "sinopsis": "La familia Greyrat se alegra cuando Zenith anuncia que está embarazada de un segundo hijo, pero los ánimos dan un giro cuando Lilia revela que también está embarazada y que Paul es el padre. ¿Será éste el fin de la feliz familia de Rudy?"
+            },
+            {
+              "number-episode": 5,
+              "name": "Una joven y la violencia",
+              "nameURL": "a-young-lady-and-violence",
+              "watchId": "jKdNSAtuRdc",
+              "sinopsis": "Rudy llega a la ciudad de Roa, donde debe pasar los próximos cinco años dando clases particulares a la hija del señor local. Sin embargo, su alumna es más de lo que esperaba, y tendrá que luchar para empezar su primer trabajo, por no hablar de mantenerlo."
+            },
+            {
+              "number-episode": 6,
+              "name": "Un día libre en Roa",
+              "nameURL": "a-day-off-in-roa",
+              "watchId": "uWY0eRQZhso",
+              "sinopsis": "Rudy es oficialmente el tutor de Eris, pero ella no quiere aprender nada más que magia. Mientras Rudy se esfuerza por hacer que se interese por otras asignaturas, se da cuenta de que las lecciones ininterrumpidas le están causando estrés y le propone un día libre en la ciudad."
+            },
+            {
+              "number-episode": 7,
+              "name": "Lo que hay más allá del esfuerzo",
+              "nameURL": "what-lies-beyond-effort",
+              "watchId": "mDa3OQLtNQo",
+              "sinopsis": "El décimo cumpleaños de Eris se acerca rápidamente y su abuelo ha invitado a nobles de todo el reino a una fiesta de baile para celebrarlo. Solo hay un problema: Eris no sabe bailar y está perdiendo rápidamente la paciencia con sus lecciones."
+            },
+            {
+              "number-episode": 8,
+              "name": "Punto de inflexión 1",
+              "nameURL": "turning-point-1",
+              "watchId": "_qxdcxhhVjM",
+              "sinopsis": "Se acerca el décimo cumpleaños de Rudy, y Eris y su familia planean una fiesta sorpresa para él. Mientras tanto, el extraño orbe que se cierne sobre la ciudad sigue siendo un misterio y llama la atención de entidades poderosas de todo el mundo."
+            },
+            {
+              "number-episode": 9,
+              "name": "Un encuentro fortuito",
+              "nameURL": "a-chance-encounter",
+              "watchId": "3UUr-yiY9Xk",
+              "sinopsis": "Rudy y Eris se encuentran varados en las tierras salvajes del Continente Demonio. Su única posibilidad de sobrevivir parece depender de Ruijerd, un guerrero de la infame tribu de demonios Superd. Pero ¿se puede confiar en él?"
+            },
+            {
+              "number-episode": 10,
+              "name": "El primer encargo y el valor de la vida",
+              "nameURL": "the-value-of-a-life-and-the-first-job",
+              "watchId": "eaTdPxSpksU",
+              "sinopsis": "Rudeus, Eris y Ruijerd llegan a la ciudad. Necesitan ganar dinero para su viaje y deciden registrarse como aventureros, pero Ruijerd, al igual que los Superd, no tienen permitido entrar. Rudeus tiene un plan, pero ¿podrá funcionar en la práctica?"
+            },
+            {
+              "number-episode": 11,
+              "name": "Niños y guerreros",
+              "nameURL": "children-and-warriors",
+              "watchId": "CnZgJNzpAz8",
+              "sinopsis": "Con su nuevo plan para hacer dinero en marcha, los Dead End deben rastrear a un monstruo misterioso. Desafortunadamente, el trabajo no sale tan bien como esperaban y los planes de Rudy resultan ser mucho más peligrosos de lo que pensaban."
+            },
+            {
+              "number-episode": 12,
+              "name": "La mujer con lo ojos de demonio",
+              "nameURL": "the-woman-with-the-demon-eyes",
+              "watchId": "3FTe_qW9pEQ",
+              "sinopsis": "Dead End descubre que Ruijerd tendrá que pagar una fortuna para salir del Continente Demonio. A medida que luchan por solucionar este inesperado contratiempo, Rudeus recibe otra visión."
+            },
+            {
+              "number-episode": 13,
+              "name": "Conexiones Perdidas",
+              "nameURL": "missed-connections",
+              "watchId": "CwUxyVU3rUE",
+              "sinopsis": "Roxy llega a Continente Demonio para comenzar la búsqueda de la familia perdida de Paul. Mientras tanto, Rudeus hace un trato con contrabandistas para que crucen a Ruijerd a través del océano."
+            },
+            {
+              "number-episode": 14,
+              "name": "Nada en la vida es gratis",
+              "nameURL": "no-such-thing-as-a-free-lunch",
+              "watchId": "zQoA9egag3U",
+              "sinopsis": "Rudeus es prisionero de la gente bestia en la aldea Doldia. ¿Podrán Ruijerd y Eris llegar a rescatarlo antes de que pierda la paciencia e intente pelear por su libertad?"
+            },
+            {
+              "number-episode": 15,
+              "name": "La tranquila vida en la aldea Doldía",
+              "nameURL": "slow-life-in-the-doldia-village",
+              "watchId": "7NzqSbYgz2M",
+              "sinopsis": "Dead End decide pasar la temporada de lluvia en la aldea Doldia. Eris se vuelve amigo de la hija del cacique, pero apego por Ghislaine conlleva a un inesperado conflicto."
+            },
+            {
+              "number-episode": 16,
+              "name": "Conflicto familiar",
+              "nameURL": "family-squabble",
+              "watchId": "-mBm7ma0eyY",
+              "sinopsis": "Rudeus, Eris y Ruijerd llegan al país sagrado de Millis, donde Rudeus comienza a pensar en su hogar. Cuando los tres se separan para tomarse un día libre, un encuentro aleatorio en un callejón lleva a Rudeus a una impactante reunión."
+            },
+            {
+              "number-episode": 17,
+              "name": "Reunión",
+              "nameURL": "reunion",
+              "watchId": "Vw_xMqKd024",
+              "sinopsis": "Tras los sucesos de su desastrosa reunión, Paul y Rudeus reflexionan sobre sus actos y buscan cómo seguir adelante."
+            },
+            {
+              "number-episode": 18,
+              "name": "Viajes divididos",
+              "nameURL": "separate-journeys",
+              "watchId": "Fqdtvpy4qH4",
+              "sinopsis": "Después de partir de Millishion, Rudeus, Eris y Ruijerd abordan un barco de regreso al Continente Central. Mientras tanto, Roxy llega a Rikarisu, donde se encuentra con caras conocidas."
+            },
+            {
+              "number-episode": 19,
+              "name": "Selección de ruta",
+              "nameURL": "route-selection",
+              "watchId": "jWbtibOQkGI",
+              "sinopsis": "Dead End llega al reino Shirone en el continente central. Rudeus se siente ansioso por reunirse con Roxy, pero una visión inesperada del hombre dios le demuestra que se metió en algo mucho peor de lo que esperaba."
+            },
+            {
+              "number-episode": 20,
+              "name": "El nacimiento de mi hermana menor, la criada",
+              "nameURL": "the-birth-of-my-little-sister-the-maid",
+              "watchId": "ZaCo_tnOMtw",
+              "sinopsis": "Rudeus está en graves aprietos, encerrado en un calabozo a prueba de magia por un déspota príncipe. Pero justo cuando todo parece estar perdido, llega un visitante inesperado con una extraña solicitud. ¿Podrá Rudeus zafarse de esta?"
+            },
+            {
+              "number-episode": 21,
+              "name": "Punto de inflexión 2",
+              "nameURL": "turning-point-2",
+              "watchId": "30rPLRs5My4",
+              "sinopsis": "Rudeus, Eris y Ruijerd están por terminar su viaje, pero un inesperado encuentro en el paso de una montaña nevada amenaza con finalizar prematuramente sus aventuras."
+            },
+            {
+              "number-episode": 22,
+              "name": "Sueños y realidad",
+              "nameURL": "dreams-and-reality",
+              "watchId": "OWT3aizIvbM",
+              "sinopsis": "Rudeus y Eris por fin regresan a Fittoa, pero despedidas inesperadas y noticias desagradables arruinan su vuelta a casa."
+            },
+            {
+              "number-episode": 23,
+              "name": "Despierta y da un paso",
+              "nameURL": "wake-up-and-take-a-step",
+              "watchId": "fUQCdpecSnU",
+              "sinopsis": "Rudeus sinks into depression following Eris's departure. As he struggles to get back on his feet, the many people he's met continue their own journeys."
+            },
+            {
+              "number-episode": 24,
+              "name": "Eris the Goblin Slayer",
+              "nameURL": "eris-the-goblin-slayer",
+              "watchId": "0g96IfrZ2UQ",
+              "sinopsis": ""
+            }
+          ]
+        }
+      ],
+      "sequels": [],
+      "prequels": []
+    },
+    {
+      "id": 2,
+      "anime-url": "reign-of-the-seven-spellblades",
+      "anime-name": "Reign of the Seven Spellblades",
+      "genres": ["acción", "drama", "fantasía"],
+      "type": "series",
+      "sinopsis": "Oliver llega a la Academia de Magia Kimberly dispuesto a comenzar sus estudios. La academia tiene fama por su dureza, donde un 20% de sus alumnos son \"consumidos por el conjuro\" antes de graduarse. El precio de aprender a usar la magia es alto, pero en su primer día, Oliver entabla amistad casual con otros alumnos que no tardan en formar un pequeño grupo para enfrentarse a esta nueva etapa de sus vidas.",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378454/reign-of-the-seven-spellblades_krbwjl.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/reign-of-the-seven-spellblades_ub69pn.webp"
+    },
+    {
+      "id": 3,
+      "anime-url": "rent-a-girlfriend",
+      "anime-name": "Rent a Girlfriend",
+      "genres": ["comedia", "romance", "shounen"],
+      "type": "series",
+      "sinopsis": "Kazuya Kinoshita es un joven universitario de 20 años que tras conseguir novia, pudo besarla, ¡pero lo dejó tras solo un mes!. \"Maldita sea, no quiero tener que volver a pasar por eso\".\n\nDesesperado, recurre a un método muy particular para tener por fin una cita: solicitar una novia de alquiler. Cuando llega al punto de encuentro le espera una chica: \"Eres Kazuya, ¿verdad?\". Es una chica preciosa de pelo negro y largo que le sonríe con ternura. La chica es Chizuru Mizuhara. ¡Y de esa cita de alquiler nace algo real! Una comedia romántica repleta de amor y emoción da comienzo.",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/rent-a-girlfriend_cpwkvs.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/rent-a-girlfriend_ekhavm.webp"
+    },
+    {
+      "id": 4,
+      "anime-url": "sugar-apple-fairy-tale",
+      "anime-name": "Sugar Apple Fairy Tale",
+      "genres": ["drama", "fantasía"],
+      "type": "series",
+      "sinopsis": "En un mundo en el que las hadas se compran y venden al mejor postor, los humanos no tienen precisamente una relación de amistad con su pueblo. Pero es precisamente la amistad lo que a Anne Halford le interesa obtener de su nuevo guardaespaldas hada, Challe, aunque a él no le hace especial ilusión la idea. Como su nueva ama, Anne le encarga escoltarla en una zona especialmente peligrosa, pero teniendo en cuenta que su guardaespaldas anhela escapar de una vida de servidumbre, la joven tendrá que lidiar con mucho más de lo que esperaba…",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378453/sugar-apple-fairy-tale_zanpjm.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/sugar-apple-fairy-tale_s02kbh.webp"
+    },
+    {
+      "id": 5,
+      "anime-url": "the-devil-is-a-part-timer",
+      "anime-name": "The Devil is a Part Timer",
+      "genres": ["comedia", "fantasía", "romance", "sobrenatural"],
+      "type": "series",
+      "sinopsis": "Frustrado por la heroína justo cuando está a un paso de conquistar el mundo, el Rey Demonio se encuentra en el Tokio moderno. Sin habilidades que valga la pena mencionar para enfrentar el mundo real, el Rey Demonio se ve obligado a llegar a fin de mes haciendo hamburguesas en un restaurante de comida rápida. Para detener cualquier plan futuro de dominación mundial, la heroína persigue el rastro del demonio y termina trabajando como una humilde vendedora por teléfono.",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378452/the-devil-is-a-part-timer_f2glxg.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/the-devil-is-a-part-timer_tflfej.webp"
+    },
+    {
+      "id": 6,
+      "anime-url": "the-quintessential-quintuplets-movie",
+      "anime-name": "The Quintessential Quintuplets Movie",
+      "genres": ["comedia", "romance"],
+      "type": "movie",
+      "sinopsis": "Fuutarou Uesugi es un estudiante de segundo año de preparatoria/instituto cuya familia siempre ha sido muy pobre. Un día recibe una suculenta oferta de trabajo como tutor a medio tiempo... ¡pero sus estudiantes resultan ser unas chicas de su propia clase! Para complicar más las cosas, son quintillizas... Las cinco hermanas son todas muy atractivas, pero no es lo único que tienen en común: todas odian estudiar y sus calificaciones siempre están al límite de la catástrofe. Tendrá que conseguir que las cinco estudien, pero primero tendrá que estudiar él cómo ganarse su confianza.",
+      "image-desktop": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378454/the-quintessential-quintuplets_plavkl.webp",
+      "image-mobile": "https://res.cloudinary.com/dbigyi12j/image/upload/v1692378549/the-quintessential-quintuplets_faibj4.webp"
+    }
+  ]
+}

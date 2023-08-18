@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useFetch } from "@useFetch";
 
 export default function SliderPrimaryAnimes() {
-  const { data } = useFetch("http://localhost:3000/animes");
+  const { data } = useFetch("https://api-anime-flix.vercel.app/animes");
 
   const ANIMES_SLIDER_COUNT = data?.length;
 
