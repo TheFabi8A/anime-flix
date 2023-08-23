@@ -1,4 +1,4 @@
-import React from "react";
+import { Chip } from "@nextui-org/react";
 
 const AnimePage = ({
   animeName,
@@ -34,16 +34,18 @@ const AnimePage = ({
           />
         </picture>
       </div>
-      <div className="max-w-5xl mx-auto">
-        <h1>{animeName}</h1>
+      <div className="max-w-5xl mx-auto p-4 flex flex-col gap-4">
+        <h1 className="text-2xl font-tektur">{animeName}</h1>
         <div className="flex gap-2 uppercase flex-wrap">
           {genres.map((genre, index) => {
             return (
-              <em
-                className="not-italic block bg-red-500 text-sm px-2 py-1"
+              <Chip
+                className="rounded-md"
+                color="secondary"
+                variant="shadow"
                 key={genre}>
                 {genre}
-              </em>
+              </Chip>
             );
           })}
         </div>

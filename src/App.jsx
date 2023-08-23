@@ -3,21 +3,28 @@ import { AnimePage, HomePage, UploadAnimePage } from "./components";
 import { useFetch } from "@useFetch";
 
 export default function App() {
-  const { data } = useFetch("https://api-anime-flix.vercel.app/animes");
+  const { data } = useFetch("http://localhost:3000/animes");
 
   return (
     <BrowserRouter>
-      <header className="w-full h-16 bg-black">
-        <Link to={"/upload-anime"}>Nuevo Video</Link>
-        <Link to={"/"}>Volver al inicio</Link>
+      <header className="flex h-16 w-full items-center justify-between p-2">
+        <Link className="font-tektur text-3xl" to={"/"}>
+          AnimeFlix
+        </Link>
+        <Link
+          to="/upload-anime"
+          className="grid w-max place-items-center rounded-md bg-red-500 p-2"
+        >
+          Agregar Anime
+        </Link>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/upload-anime" element={<UploadAnimePage />} />
-          {data?.map((anime) => (
+          {data?.map((anime, index) => (
             <Route
-              key={anime["anime-url"]}
+              key={index}
               path={`/${anime?.type}/${anime?.["anime-url"]}`}
               element={
                 <AnimePage

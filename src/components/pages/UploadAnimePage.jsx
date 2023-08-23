@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useFetch } from "@useFetch";
+import { Button, Input, Textarea, Select, SelectItem } from "@nextui-org/react";
 
 export default function UploadAnime() {
-  const { postData } = useFetch("https://api-anime-flix.vercel.app/animes");
+  const { postData } = useFetch("http://localhost:3000/animes");
+
+  const [isLoadingPostData, setIsLoadingPostData] = useState(false);
 
   const [sinopsisValue, setSinopsisValue] = useState("");
-  const [selectedType, setSelectedType] = useState("series");
+  const [selectedType, setSelectedType] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [animeUrl, setAnimeUrl] = useState("");
   const [animeName, setAnimeName] = useState("");
@@ -30,11 +33,21 @@ export default function UploadAnime() {
     "Thriller",
   ];
 
-  const handleTypeChange = (event) => {
-    setSelectedType(event.target.value);
+  const handleGenreChange = (event) => {
+    const { value } = event.target;
+    setSelectedGenres((prevSelectedGenres) => {
+      if (prevSelectedGenres.includes(value)) {
+        return prevSelectedGenres.filter((genre) => genre !== value);
+      } else {
+        return [...prevSelectedGenres, value];
+      }
+    });
   };
 
   const cleanText = (text) => {
+    if (text.startsWith("-")) {
+      text = text.slice(1);
+    }
     return text.replace(/[^a-zA-Z0-9\s]/g, "");
   };
 
@@ -46,20 +59,11 @@ export default function UploadAnime() {
     const inputText = event.target.value;
     const formattedText = inputText
       .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, "") // Allow only letters, numbers, spaces, and hyphens
+      .replace(/^[ -]+/, "")
       .replace(/\s+/g, "-")
       .replace(/-+/g, "-");
     setAnimeUrl(formattedText);
-  };
-
-  const handleGenreChange = (event) => {
-    const { value } = event.target;
-    setSelectedGenres((prevSelectedGenres) => {
-      if (prevSelectedGenres.includes(value)) {
-        return prevSelectedGenres.filter((genre) => genre !== value);
-      } else {
-        return [...prevSelectedGenres, value];
-      }
-    });
   };
 
   const handleAnimeNameChange = (event) => {
@@ -110,6 +114,7 @@ export default function UploadAnime() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoadingPostData(true);
 
     try {
       let imageDesktopUrl = "";
@@ -132,7 +137,9 @@ export default function UploadAnime() {
 
       await postData(animeData, false);
       window.location.reload();
+      setIsLoadingPostData(false);
     } catch (error) {
+      setIsLoadingPostData(false);
       console.error("Error adding new anime:", error);
     }
   };
@@ -140,107 +147,126 @@ export default function UploadAnime() {
   return (
     <form
       onSubmit={handleSubmit}
-      action="https://api-anime-flix.vercel.app/animes"
+      action="http://localhost:3000/animes"
       method="POST"
-      className="max-w-md mx-auto p-6 rounded-lg shadow border border-red-500">
-      <label htmlFor="anime-url" className="block mb-2 font-semibold">
-        Anime URL: [ English ]
-      </label>
-      <input
+      className="max-w-md md:mx-auto p-6 rounded-lg shadow border border-red-500 m-4">
+      <Input
+        color="secondary"
+        label="Anime URL : [ English ]"
+        placeholder="Ejemplo: bocchi-the-rock"
+        variant="underlined"
         type="text"
         id="anime-url"
         name="anime-url"
-        className="w-full text-black px-4 py-2 rounded border focus:outline-none focus:ring-2 focus:ring-red-500"
         value={animeUrl}
         onChange={handleAnimeUrlChange}
-        required
+        startContent={
+          <div className="pointer-events-none flex items-center">
+            <span className="text-default-400 text-small">
+              {`https://animeflix/${
+                selectedType.length > 0 ? selectedType + "/" : ""
+              }`}
+            </span>
+          </div>
+        }
+        isRequired
       />
-
-      <label htmlFor="anime-name" className="block mt-4 mb-2 font-semibold">
-        Anime Name:
-      </label>
-      <input
+      <Input
+        color="secondary"
+        variant="underlined"
+        label="Anime Name :"
         type="text"
         id="anime-name"
         name="anime-name"
-        className="w-full px-4 py-2 rounded border text-black focus:outline-none focus:ring-2 focus:ring-red-500"
         value={animeName}
+        placeholder="Ejemplo: Bocchi The Rock"
         onChange={handleAnimeNameChange}
-        required
+        isRequired
       />
-
-      <label htmlFor="sinopsis" className="block mt-4 mb-2 font-semibold">
-        Sinopsis:
-      </label>
-      <textarea
+      <Textarea
+        color="secondary"
+        variant="underlined"
+        label="Sinopsis :"
+        placeholder="Escribe la sinopsis"
         value={sinopsisValue}
         onChange={handleSinopsisChange}
         id="sinopsis"
         name="sinopsis"
-        className="w-full px-4 py-2 rounded border focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
-        required></textarea>
-
-      <label htmlFor="type" className="block mt-4 mb-2 font-semibold">
-        Type: (Series / Movie):
-      </label>
-      <select
+        description="¡A resumir se ha dicho! Danos una sinopsis de ese anime para cautivar a quienes lo vean. Tu toque personal hace la diferencia."
+        isRequired
+      />
+      <Select
+        label="Type: ( Series / Movie )"
+        color="secondary"
+        variant="underlined"
         value={selectedType}
-        onChange={handleTypeChange}
         id="type"
         name="type"
-        className="w-full px-4 py-2 text-black rounded border focus:outline-none focus:ring-2 focus:ring-red-500"
-        required>
-        <option value="series">Series</option>
-        <option value="movie">Movie</option>
-      </select>
-
-      <label htmlFor="mobile-image" className="block mt-4 mb-2 font-semibold">
-        Mobile Image:
-      </label>
-      <input
+        isRequired>
+        <SelectItem onClick={() => setSelectedType("series")} value="series">
+          Series
+        </SelectItem>
+        <SelectItem onClick={() => setSelectedType("movie")} value="movie">
+          Movie
+        </SelectItem>
+      </Select>
+      <Input
+        label="Mobile Image :"
+        color="secondary"
+        variant="underlined"
         type="file"
         id="mobile-image"
         name="mobile-image"
         onChange={handleMobileImageChange}
-        className="w-full py-2 border focus:outline-none focus:ring-2 focus:ring-red-500"
         accept="image/*"
-        required
+        isRequired
       />
-
-      <label htmlFor="desktop-image" className="block mt-4 mb-2 font-semibold">
-        Desktop Image:
-      </label>
-      <input
+      <Input
+        variant="underlined"
+        color="secondary"
+        label="Desktop Image :"
         type="file"
         id="desktop-image"
         name="desktop-image"
-        className="w-full py-2 border focus:outline-none focus:ring-2 focus:ring-red-500"
         accept="image/*"
         onChange={handleDesktopImageChange}
-        required
+        isRequired
       />
-
-      <div className="mt-4 mb-2 font-semibold">Genres:</div>
-      <div className="flex flex-wrap gap-2">
+      <Select
+        label="Género/s :"
+        color="secondary"
+        variant="underlined"
+        value={selectedGenres}
+        selectionMode="multiple"
+        isRequired>
         {availableGenres.map((genre) => (
-          <button
-            type="button"
-            key={genre}
+          <SelectItem
             onClick={() => handleGenreChange({ target: { value: genre } })}
-            className={`px-2 py-1 rounded border ${
-              selectedGenres.includes(genre)
-                ? "bg-red-500 text-white"
-                : "bg-white text-black"
-            }`}>
+            color="default"
+            variant="solid"
+            key={genre}
+            value={genre}>
             {genre}
-          </button>
+          </SelectItem>
         ))}
-      </div>
-      <button
-        type="submit"
-        className="mt-6 bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-red-500">
-        Modificar Anime
-      </button>
+      </Select>
+      <p className="text-small text-default-500">
+        Géneros seleccionados: {Array.from(selectedGenres).join(", ")}
+      </p>
+      {isLoadingPostData ? (
+        <Button
+          isLoading
+          className="p-2"
+          color="primary"
+          variant="solid"
+          type="submit">
+          Agregando Anime
+        </Button>
+      ) : (
+        <Button className="p-2" color="primary" variant="solid" type="submit">
+          Agregar Anime
+        </Button>
+      )}
     </form>
   );
 }

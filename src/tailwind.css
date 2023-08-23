@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes bar {
+@keyframes progress-animation-slider {
     from {
-        width: 0%;
+        transform: scaleX(0);
     }
 
     to {
-        width: 100%;
+        transform: scaleY(1);
     }
+}
+
+@font-face {
+    font-family: 'Tektur';
+    src: url('/fonts/Tektur-VariableFont.woff2') format('woff2'),
+        url('/fonts/Tektur-VariableFont.woff') format('woff'),
+        url('/fonts/Tektur-VariableFont.ttf') format('truetype');
+    font-display: swap;
+}
+
+.anime-page-image {
+    view-transition-name: meow-image;
 }

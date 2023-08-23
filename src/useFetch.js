@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 export function useFetch(url) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loadingData, setLoadingData] = useState(true);
 
   useEffect(() => {
+    setLoadingData(true);
     fetch(url)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => setError(error))
-      .finally(() => setLoading(false));
+      .finally(() => setLoadingData(false));
   }, [url]);
 
   const postData = async (formData, uploadImages = false) => {
@@ -57,5 +58,5 @@ export function useFetch(url) {
     }
   };
 
-  return { data, loading, error, postData };
+  return { data, loadingData, error, postData };
 }

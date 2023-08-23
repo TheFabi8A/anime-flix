@@ -1,7 +1,17 @@
+const { nextui } = require("@nextui-org/react");
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        tektur: ["Tektur, sans-serif"],
+      },
+    },
   },
-  plugins: [require("tailwindcss-animated")],
+  plugins: [nextui()],
 };
