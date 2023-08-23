@@ -85,7 +85,7 @@ export default function UploadAnime() {
     formData.append("file", imageFile);
     formData.append(
       "upload_preset",
-      import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET
+      import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET,
     );
     formData.append("cloud_name", import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
 
@@ -97,7 +97,7 @@ export default function UploadAnime() {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       if (!response.ok) {
@@ -149,7 +149,8 @@ export default function UploadAnime() {
       onSubmit={handleSubmit}
       action="http://localhost:3000/animes"
       method="POST"
-      className="max-w-md md:mx-auto p-6 rounded-lg shadow border border-red-500 m-4">
+      className="m-4 max-w-md rounded-lg border border-red-500 p-6 shadow md:mx-auto"
+    >
       <Input
         color="secondary"
         label="Anime URL : [ English ]"
@@ -162,7 +163,7 @@ export default function UploadAnime() {
         onChange={handleAnimeUrlChange}
         startContent={
           <div className="pointer-events-none flex items-center">
-            <span className="text-default-400 text-small">
+            <span className="text-small text-default-400">
               {`https://animeflix/${
                 selectedType.length > 0 ? selectedType + "/" : ""
               }`}
@@ -202,7 +203,8 @@ export default function UploadAnime() {
         value={selectedType}
         id="type"
         name="type"
-        isRequired>
+        isRequired
+      >
         <SelectItem onClick={() => setSelectedType("series")} value="series">
           Series
         </SelectItem>
@@ -238,14 +240,16 @@ export default function UploadAnime() {
         variant="underlined"
         value={selectedGenres}
         selectionMode="multiple"
-        isRequired>
+        isRequired
+      >
         {availableGenres.map((genre) => (
           <SelectItem
             onClick={() => handleGenreChange({ target: { value: genre } })}
             color="default"
             variant="solid"
             key={genre}
-            value={genre}>
+            value={genre}
+          >
             {genre}
           </SelectItem>
         ))}
@@ -259,7 +263,8 @@ export default function UploadAnime() {
           className="p-2"
           color="primary"
           variant="solid"
-          type="submit">
+          type="submit"
+        >
           Agregando Anime
         </Button>
       ) : (

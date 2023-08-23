@@ -1,21 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { ArrowSVG } from "../svg";
 import { Link } from "react-router-dom";
 
 import { useFetch } from "@useFetch";
-import { flushSync } from "react-dom";
+import { AnimeContext } from "../../context/AnimeContextProvider";
 
 export default function SliderPrimaryAnimes() {
   const { data } = useFetch("http://localhost:3000/animes");
-  const [isThumbnail, setIsThumbnail] = useState(true);
-
-  const handleMove = () => {
-    document.startViewTransition(() => {
-      flushSync(() => {
-        setIsThumbnail((prev) => !prev);
-      });
-    });
-  };
+  const { pepito } = useContext(AnimeContext);
+  console.log(pepito);
 
   const ANIMES_SLIDER_COUNT = data?.length;
   const timeToChangeImage = 7500;
@@ -108,53 +101,10 @@ export default function SliderPrimaryAnimes() {
     event.preventDefault();
   };
 
-  const BUTTONS_SLIDER = Array.from(
-    { length: ANIMES_SLIDER_COUNT },
-    (_, index) => (
-      <button
-        key={index}
-        className="relative h-1 w-8 bg-white/50"
-        type="button"
-        onClick={() => {
-          setCurrentSlide(index);
-          setIsDragging(false);
-        }}
-      >
-        <span
-          className={`absolute left-0 top-0 h-full w-full origin-left scale-x-0 bg-pink-600 transition-all duration-[${timeToChangeImage}ms] ${
-            currentSlide === index
-              ? "animate-[progress-animation-slider_7.5s_linear_1]"
-              : "animate-none"
-          }`}
-        />
-      </button>
-    ),
-  );
-
   const isMobileView = window.innerWidth <= 767;
 
   return (
     <>
-      {/* <button onClick={handleMove}>Move</button>
-      {isThumbnail && (
-        <img
-          src="https://res.cloudinary.com/djzsjzasg/image/upload/c_scale,w_300/v1678947391/malcolm-kee/meow_dtsn8h.png"
-          alt="cat"
-          className="cat-img thumbnail"
-        />
-      )}
-      {!isThumbnail && (
-        <div className="cat-details">
-          <img
-            src="https://res.cloudinary.com/djzsjzasg/image/upload/c_scale,w_500/v1678947391/malcolm-kee/meow_dtsn8h.png"
-            alt="cat"
-            className="cat-img detailed-img"
-          />
-          <div className="cat-desc">
-            <h2>Cat Details</h2>
-          </div>
-        </div>
-      )} */}
       <div
         className="relative bg-cover py-[10%] transition-[background] duration-500 md:py-0"
         style={{
@@ -195,38 +145,30 @@ export default function SliderPrimaryAnimes() {
                 transform: `translateX(-${currentSlide * 100}%)`,
               }}
             >
-              {isThumbnail && (
-                <>
-                  {data?.map((anime, index) => (
-                    <div
-                      key={anime?.["anime-name"]}
-                      className="w-full shrink-0"
-                    >
-                      <Link
-                        onClick={handleMove}
-                        draggable={false}
-                        to={`/${anime?.type}/${anime["anime-url"]}`}
-                        className={`absolute z-50 h-full w-full`}
-                        style={{
-                          left: `calc(${index} * 100%)`,
-                        }}
-                      />
-                      <picture>
-                        <source
-                          srcSet={anime?.["image-mobile"]}
-                          media="(max-width: 767px)"
-                        />
-                        <img
-                          onDragStart={handleDragStart}
-                          className="anime-page-image w-full"
-                          src={anime?.["image-desktop"]}
-                          alt={`${anime["anime-url"]} portada`}
-                        />
-                      </picture>
-                    </div>
-                  ))}
-                </>
-              )}
+              {data?.map((anime, index) => (
+                <div key={anime?.["anime-name"]} className="w-full shrink-0">
+                  <Link
+                    draggable={false}
+                    to={`/${anime?.type}/${anime["anime-url"]}`}
+                    className={`absolute z-50 h-full w-full`}
+                    style={{
+                      left: `calc(${index} * 100%)`,
+                    }}
+                  />
+                  <picture>
+                    <source
+                      srcSet={anime?.["image-mobile"]}
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      onDragStart={handleDragStart}
+                      className="anime-page-image w-full"
+                      src={anime?.["image-desktop"]}
+                      alt={`${anime["anime-url"]} portada`}
+                    />
+                  </picture>
+                </div>
+              ))}
             </div>
           </div>
           <button
@@ -245,7 +187,28 @@ export default function SliderPrimaryAnimes() {
         </div>
       </div>
       <div className="relative z-10 flex w-full flex-wrap justify-center gap-2 p-2">
-        {BUTTONS_SLIDER}
+        {Array.from({ length: ANIMES_SLIDER_COUNT }, (_, index) => (
+          <button
+            key={index}
+            className="relative h-1 w-24 bg-white/50 text-left text-xs lg:p-1"
+            type="button"
+            onClick={() => {
+              setCurrentSlide(index);
+              setIsDragging(false);
+            }}
+          >
+            <span
+              className={`absolute left-0 top-0 h-1 w-full origin-left scale-x-0 bg-pink-600 transition-all ${
+                currentSlide === index
+                  ? "animate-[progress-animation-slider_7.5s_linear_1]"
+                  : "animate-none"
+              }`}
+            />
+            <span className="line-clamp-3 hidden lg:block">
+              {data[index]?.["anime-name"]}
+            </span>
+          </button>
+        ))}
       </div>
     </>
   );

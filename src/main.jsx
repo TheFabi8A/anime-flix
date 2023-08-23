@@ -4,10 +4,14 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./tailwind.css";
 
+import AnimeContextProvider from "./context/AnimeContextProvider";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <NextUIProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </NextUIProvider>
+  <AnimeContextProvider>
+    <NextUIProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </NextUIProvider>
+  </AnimeContextProvider>,
 );

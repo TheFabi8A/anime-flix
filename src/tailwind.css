@@ -19,7 +19,3 @@
         url('/fonts/Tektur-VariableFont.ttf') format('truetype');
     font-display: swap;
 }
-
-.anime-page-image {
-    view-transition-name: meow-image;
-}

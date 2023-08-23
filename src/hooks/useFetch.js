@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useFetch(url) {
+export default function useFetch(url) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loadingData, setLoadingData] = useState(true);
@@ -24,7 +24,7 @@ export function useFetch(url) {
           {
             method: "POST",
             body: formData,
-          }
+          },
         );
 
         if (!imagesResponse.ok) {
