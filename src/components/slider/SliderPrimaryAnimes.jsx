@@ -2,8 +2,8 @@ import { useState, useEffect, useRef, useContext } from "react";
 import { ArrowSVG } from "../svg";
 import { Link } from "react-router-dom";
 
-import { useFetch } from "@useFetch";
 import { AnimeContext } from "../../context/AnimeContextProvider";
+import useFetch from "../../hooks/useFetch";
 
 export default function SliderPrimaryAnimes() {
   const { data } = useFetch("http://localhost:3000/animes");

@@ -1,6 +1,14 @@
 import { useState } from "react";
-import { useFetch } from "@useFetch";
-import { Button, Input, Textarea, Select, SelectItem } from "@nextui-org/react";
+import {
+  Button,
+  Input,
+  Textarea,
+  Select,
+  SelectItem,
+  Image,
+} from "@nextui-org/react";
+import { CloseSVG, UploadImageSVG } from "../svg";
+import useFetch from "../../hooks/useFetch";
 
 export default function UploadAnime() {
   const { postData } = useFetch("http://localhost:3000/animes");
@@ -12,8 +20,75 @@ export default function UploadAnime() {
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [animeUrl, setAnimeUrl] = useState("");
   const [animeName, setAnimeName] = useState("");
+
+  //! Inputs Files
   const [mobileImageFile, setMobileImageFile] = useState(null);
+  const [mobileImagePreview, setMobileImagePreview] = useState(null);
+
   const [desktopImageFile, setDesktopImageFile] = useState(null);
+  const [desktopImagePreview, setDesktopImagePreview] = useState(null);
+
+  const handleMobileImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setMobileImageFile(file);
+      setMobileImagePreview(URL.createObjectURL(file));
+    }
+  };
+
+  const handleDesktopImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setDesktopImageFile(file);
+      setDesktopImagePreview(URL.createObjectURL(file));
+    }
+  };
+
+  const handleDesktopImageDrop = (event) => {
+    event.preventDefault();
+
+    const file = event.dataTransfer.files[0];
+    if (
+      file &&
+      (file.type.includes("image/webp") ||
+        file.type.includes("image/jpeg") ||
+        file.type.includes("image/png"))
+    ) {
+      setDesktopImageFile(file);
+      setDesktopImagePreview(URL.createObjectURL(file));
+    } else {
+      console.log("El archivo arrastrado no es una imagen válida.");
+    }
+  };
+
+  const handleMobileImageDrop = (event) => {
+    event.preventDefault();
+
+    const file = event.dataTransfer.files[0];
+    if (
+      file &&
+      (file.type.includes("image/webp") ||
+        file.type.includes("image/jpeg") ||
+        file.type.includes("image/png"))
+    ) {
+      setMobileImageFile(file);
+      setMobileImagePreview(URL.createObjectURL(file));
+    } else {
+      console.log("El archivo arrastrado no es una imagen válida.");
+    }
+  };
+
+  const clearMobileImage = () => {
+    setMobileImageFile(null);
+    setMobileImagePreview(null);
+  };
+
+  const clearDesktopImage = () => {
+    setDesktopImageFile(null);
+    setDesktopImagePreview(null);
+  };
+
+  //!...
 
   const availableGenres = [
     "Action",
@@ -59,7 +134,7 @@ export default function UploadAnime() {
     const inputText = event.target.value;
     const formattedText = inputText
       .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, "") // Allow only letters, numbers, spaces, and hyphens
+      .replace(/[^a-z0-9\s-]/g, "")
       .replace(/^[ -]+/, "")
       .replace(/\s+/g, "-")
       .replace(/-+/g, "-");
@@ -70,14 +145,6 @@ export default function UploadAnime() {
     const inputText = event.target.value;
     const cleanedText = cleanText(inputText);
     setAnimeName(cleanedText);
-  };
-
-  const handleMobileImageChange = (event) => {
-    setMobileImageFile(event.target.files[0]);
-  };
-
-  const handleDesktopImageChange = (event) => {
-    setDesktopImageFile(event.target.files[0]);
   };
 
   const uploadImageToCloudinary = async (imageFile) => {
@@ -136,8 +203,8 @@ export default function UploadAnime() {
       };
 
       await postData(animeData, false);
-      window.location.reload();
       setIsLoadingPostData(false);
+      window.location.reload();
     } catch (error) {
       setIsLoadingPostData(false);
       console.error("Error adding new anime:", error);
@@ -149,7 +216,7 @@ export default function UploadAnime() {
       onSubmit={handleSubmit}
       action="http://localhost:3000/animes"
       method="POST"
-      className="m-4 max-w-md rounded-lg border border-red-500 p-6 shadow md:mx-auto"
+      className="m-4 flex max-w-md flex-col gap-4 rounded-lg border border-red-500 p-6 shadow md:mx-auto"
     >
       <Input
         color="secondary"
@@ -212,28 +279,91 @@ export default function UploadAnime() {
           Movie
         </SelectItem>
       </Select>
-      <Input
-        label="Mobile Image :"
-        color="secondary"
-        variant="underlined"
-        type="file"
-        id="mobile-image"
-        name="mobile-image"
-        onChange={handleMobileImageChange}
-        accept="image/*"
-        isRequired
-      />
-      <Input
-        variant="underlined"
-        color="secondary"
-        label="Desktop Image :"
-        type="file"
-        id="desktop-image"
-        name="desktop-image"
-        accept="image/*"
-        onChange={handleDesktopImageChange}
-        isRequired
-      />
+      <div>
+        <label
+          htmlFor="mobile-image"
+          className="flex h-10 w-full items-center justify-center rounded-md bg-pink-600 text-white"
+          onDragOver={(e) => e.preventDefault()}
+          onDrag={(e) => e.preventDefault()}
+          onDrop={handleMobileImageDrop}
+        >
+          Subir imagen formato móvil
+        </label>
+        <input
+          className="hidden"
+          type="file"
+          id="mobile-image"
+          name="mobile-image"
+          onChange={handleMobileImageChange}
+          accept=".webp, .jpg, .png"
+          required
+        />
+      </div>
+      {mobileImagePreview && (
+        <div className="relative">
+          <Image
+            className="w-1/2"
+            src={mobileImagePreview}
+            alt="Mobile Image Preview"
+          />
+          <Button
+            className="absolute right-2 top-2 z-10"
+            onClick={clearMobileImage}
+            isIconOnly
+            color="secondary"
+            variant="faded"
+            aria-label="Eliminar imagen formato móvil"
+          >
+            <CloseSVG />
+          </Button>
+        </div>
+      )}
+      <div
+        className="flex flex-col items-center rounded-md p-4 outline-dashed"
+        onDragOver={(e) => e.preventDefault()}
+        onDrag={(e) => e.preventDefault()}
+        onDrop={handleDesktopImageDrop}
+      >
+        <span className="w-24">
+          <UploadImageSVG />
+        </span>
+        <p className="px-4 text-center font-tektur font-bold">
+          Arrastra y suelta la imagen en dimensiones{" "}
+          <span className="underline">desktop</span> aquí
+        </p>
+        <span>o</span>
+        <label
+          htmlFor="desktop-image"
+          className="flex h-10 w-full items-center justify-center rounded-md bg-purple-600 font-tektur font-bold tracking-widest text-white underline decoration-white decoration-wavy"
+        >
+          Busca el archivo
+        </label>
+        <p>desde tu dispositivo</p>
+        <input
+          className="hidden"
+          type="file"
+          id="desktop-image"
+          name="desktop-image"
+          onChange={handleDesktopImageChange}
+          accept=".webp, .jpg, .png"
+          required
+        />
+      </div>
+      {desktopImagePreview && (
+        <div className="relative">
+          <Image src={desktopImagePreview} alt="Desktop Image Preview" />
+          <Button
+            className="absolute right-2 top-2 z-10"
+            onClick={clearDesktopImage}
+            isIconOnly
+            color="secondary"
+            variant="faded"
+            aria-label="Eliminar imagen formato desktop"
+          >
+            <CloseSVG />
+          </Button>
+        </div>
+      )}
       <Select
         label="Género/s :"
         color="secondary"
@@ -268,7 +398,7 @@ export default function UploadAnime() {
           Agregando Anime
         </Button>
       ) : (
-        <Button className="p-2" color="primary" variant="solid" type="submit">
+        <Button className="p-2" color="secondary" variant="solid" type="submit">
           Agregar Anime
         </Button>
       )}

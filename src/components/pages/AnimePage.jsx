@@ -18,32 +18,34 @@ const AnimePage = ({
   return (
     <>
       <div
-        className="bg-cover relative bg-center"
+        className="relative bg-cover bg-center"
         style={{
           backgroundImage: `url('${
             isMobileView ? animeImageMobile : animeImageDesktop
           }')`,
-        }}>
-        <span className="absolute w-full h-full backdrop-blur-sm backdrop-brightness-50"></span>
-        <picture className="w-full shrink-0 relative">
+        }}
+      >
+        <span className="absolute h-full w-full backdrop-blur-sm backdrop-brightness-50"></span>
+        <picture className="relative w-full shrink-0">
           <source srcSet={animeImageMobile} media="(max-width: 767px)" />
           <img
-            className="w-1/2 mx-auto md:max-w-screen-[930px] md:max-h-[35vh] 2xl:max-h-[60vh] object-scale-down"
+            className="md:max-w-screen-[930px] mx-auto w-1/2 object-scale-down md:max-h-[35vh] 2xl:max-h-[60vh]"
             src={animeImageDesktop}
             alt={`${animeName} portada`}
           />
         </picture>
       </div>
-      <div className="max-w-5xl mx-auto p-4 flex flex-col gap-4">
-        <h1 className="text-2xl font-tektur">{animeName}</h1>
-        <div className="flex gap-2 uppercase flex-wrap">
+      <div className="mx-auto flex max-w-5xl flex-col gap-4 p-4">
+        <h1 className="font-tektur text-2xl">{animeName}</h1>
+        <div className="flex flex-wrap gap-2 uppercase">
           {genres.map((genre, index) => {
             return (
               <Chip
                 className="rounded-md"
                 color="secondary"
                 variant="shadow"
-                key={genre}>
+                key={genre}
+              >
                 {genre}
               </Chip>
             );

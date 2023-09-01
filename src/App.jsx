@@ -1,6 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { AnimePage, HomePage, UploadAnimePage } from "./components";
-import { useFetch } from "@useFetch";
+import useFetch from "./hooks/useFetch";
 
 export default function App() {
   const { data } = useFetch("http://localhost:3000/animes");

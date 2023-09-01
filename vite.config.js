@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@useFetch": "src/hooks/useFetch.js",
+      // "@useFetch": "/src/hooks/useFetch.js",
     },
   },
 });
